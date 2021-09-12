@@ -2,7 +2,7 @@ package org.designpattern.structure.adapter;
 
 public class SquarePegAdapter extends RoundPeg{
 
-    private SquarePeg squarePeg;
+    private SquarePeg squarePeg;  // Attention: Weight Point
 
     public SquarePegAdapter(SquarePeg squarePeg) {
         this.squarePeg = squarePeg;
