@@ -1,4 +1,4 @@
-package org.designpattern.createpattern.factorymethod;
+package org.designpattern.createpattern._1_factorymethod;
 
 public class WebDialog extends Dialog{
     @Override

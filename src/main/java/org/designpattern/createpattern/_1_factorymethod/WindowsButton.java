@@ -1,6 +1,6 @@
-package org.designpattern.createpattern.factorymethod;
+package org.designpattern.createpattern._1_factorymethod;
 
-public class HTMLButton implements Button{
+public class WindowsButton implements Button{
     @Override
     public void render() {
 
