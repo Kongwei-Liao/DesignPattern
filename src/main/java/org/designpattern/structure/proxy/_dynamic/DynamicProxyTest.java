@@ -21,10 +21,11 @@ public class DynamicProxyTest {
         System.out.println("----------------------------------");
         proxy.update();
 
-        // 方法二：直接通过JDK的Proxy实例化被代理对象的代理对象
+        // 方法二：直接通过JDK的Proxy实例化被代理对象的代理对象,  请注意newProxyInstance传入的target和invocationHandler传入的adminService并不是同一个对象
         System.out.println("============ 方法二 ==============");
         AdminService target = new AdminServiceImpl();
         AdminServiceInvocation invocation = new AdminServiceInvocation(adminService);
+        // 第二个参数必须是接口
         AdminService proxy2 = (AdminService) Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), invocation);
 
         Object obj2 = proxy2.find();

@@ -11,6 +11,14 @@ public class AdminServiceInvocation  implements InvocationHandler {
         this.target = target;
     }
 
+    /**
+     * 动态代理的核心方法，通过该方法的实现，jdk来进行对象的动态代理。
+     * @param proxy 被代理对象
+     * @param method 被代理对象的方法
+     * @param args 被代理对象方法的参数列表
+     * @return 被代理对象 proxy 的代理对象
+     * @throws Throwable 异常
+     */
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("判断用户是否有权限进行操作");
